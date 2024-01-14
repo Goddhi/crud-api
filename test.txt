@@ -1,0 +1,22 @@
+packages installation
+go get -u github.com/gorilla/mux
+
+
+explanation on how to remove an item in a slice from CHatGPT
+
+The line movies = append(movies[:index], movies[index+1:]...) in Go is used to remove an element from a slice at a specific index. Let's break it down to understand how it works:
+
+movies: This is a slice. In Go, a slice is a dynamically-sized, flexible view into the elements of an array.
+
+index: This is the position of the element in the slice movies that you want to remove.
+
+movies[:index]: This creates a new slice that includes all elements of movies from the start up to, but not including, the element at index.
+
+movies[index+1:]: This creates another slice that includes all elements of movies starting from the element just after index to the end of the slice.
+
+append(movies[:index], movies[index+1:]...): The append function is used to concatenate two slices. The first argument is the slice movies[:index], and the second argument is movies[index+1:]. The ... syntax is used to pass a slice to append as multiple arguments, effectively appending all elements of the second slice to the first.
+
+Result: The result of the append is a new slice that contains all elements of the original movies slice except for the one at index. The element at index is "skipped" or removed.
+
+
+.. the server 
